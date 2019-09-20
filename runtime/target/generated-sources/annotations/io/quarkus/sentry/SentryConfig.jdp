@@ -1,4 +1,4 @@
 #
-#Fri Sep 20 16:38:59 CEST 2019
+#Fri Sep 20 17:17:10 CEST 2019
 io.quarkus.sentry.SentryConfig.packages=This option is highly recommended as it affects stacktrace grouping and display on Sentry. See documentation\: https\://docs.sentry.io/clients/java/config/\#in-application-stack-frames
 io.quarkus.sentry.SentryConfig.dsn=Sentry DSN
