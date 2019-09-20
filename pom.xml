@@ -16,7 +16,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <quarkus.version>0.22.0</quarkus.version>
+        <quarkus.version>999-SNAPSHOT</quarkus.version>
         <sentry.version>1.7.5</sentry.version>
     </properties>
 
