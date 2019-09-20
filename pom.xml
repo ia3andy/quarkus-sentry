@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>jboss-parent</artifactId>
+        <groupId>org.jboss</groupId>
+        <version>34</version>
+    </parent>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-sentry-parent</artifactId>
+    <name>Quarkus - Sentry - Parent</name>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <quarkus.version>999-SNAPSHOT</quarkus.version>
+        <sentry.version>1.7.5</sentry.version>
+    </properties>
+
+    <modules>
+        <module>deployment</module>
+        <module>runtime</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.sentry</groupId>
+                <artifactId>sentry</artifactId>
+                <version>${sentry.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-build-parent</artifactId>
+                <version>${quarkus.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-sentry</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+                <version>${quarkus.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

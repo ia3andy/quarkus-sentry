@@ -1,0 +1,45 @@
+== Summary
+
+icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
+
+[.configuration-reference, cols="65,.^17,.^13,^.^5"]
+|===
+|Configuration property|Type|Default|Lifecycle
+
+|<<quarkus.sentry.dsn, quarkus.sentry.dsn>>
+
+Sentry DSN.|string 
+|
+| icon:cogs[title=Overridable at runtime]
+
+|<<quarkus.sentry.packages, quarkus.sentry.packages>>
+
+This option is highly recommended as it affects stacktrace grouping and display on Sentry.|string 
+|
+| icon:cogs[title=Overridable at runtime]
+|===
+
+
+== Details
+
+[[quarkus.sentry.dsn]]
+`quarkus.sentry.dsn` icon:cogs[title=Overridable at runtime]::
++
+--
+Sentry DSN
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.sentry.packages]]
+`quarkus.sentry.packages` icon:cogs[title=Overridable at runtime]::
++
+--
+This option is highly recommended as it affects stacktrace grouping and display on Sentry. See documentation: https://docs.sentry.io/clients/java/config/#in-application-stack-frames
+
+Type: `string` 
+--
+
+***
